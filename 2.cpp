@@ -8,10 +8,12 @@ float volume(float);
 float volume(float,float);
 float volume(float,float,float);
 int main(){
-    system("cls");
     float r,l,b,h;
     int n;
     float v;
+    char c;
+    first:
+    system("cls");
     cout<<"\t\t\t\t ||||||------------ Welcome to Volume Calculator -------------||||||\t\t\t\t\n\n";
     cout<<"Choose the number from the list of 3D shape whose volume is to be determined:\n\n";
     cout<<"\t\t 1. Cylinder \t\t\t 2. Cube \t\t\t 3. Cuboid"<<endl;
@@ -41,8 +43,11 @@ int main(){
     break;
     }
 
-    cout<<"\n\nPress any key to continue:";
-    getch();
+    cout<<"\n\nPress r to go to calculator and c to continue/exit:";
+    cin>>c;
+    if(c=='r')
+     goto first;
+    else 
     system("cls");
 }
 float volume(float r, float h){
